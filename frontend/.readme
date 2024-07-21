@@ -1,0 +1,3 @@
+Sign-Up : 
+After completion of signup we have receive the user from the backend now we need to verify email for that we'll use useNavigate() hook to navigate to /verification and while navigating we'll 
+send the user info allong with now then we reach the /verification page we can access this userInfo using useLocation() inside state object
