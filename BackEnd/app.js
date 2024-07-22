@@ -22,6 +22,9 @@ app.use(express.json()); //so that our app can indentify JSON if it comes in req
 app.use(morgan('combined')); //tells us the details of upcoming requests on app()
 
 //Route Handlers
+app.get('/',(req,res) => {
+    return res.json({message:"Welcome from the backend"});
+})
 app.use('/api/user',userRouter); //user routes
 app.use('/api/actor',actorRouter); //actor routes
 app.use('/api/movie',movieRouter); //movie routes
