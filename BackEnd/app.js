@@ -35,6 +35,7 @@ app.use('/*',handleNotFound) //in case the incoming request doesn't match with a
 //Error Handler
 app.use(errorHandler);
 
-app.listen(8000,()=>{
-    console.log("Backend Server Started On Port 8000");
+const PORT = process.env.PORT || 8000
+app.listen(PORT,()=>{
+    console.log("Backend Server Started On Port " + PORT);
 });
