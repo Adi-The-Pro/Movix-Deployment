@@ -123,11 +123,11 @@ export default function HeroSlideshow() {
       <div className="md:w-4/5 w-full aspect-video relative overflow-hidden">
         
         {/*Current Slide*/}
-        <Slide ref={slideRef} title={currentSlide.title} src={currentSlide.poster} id={currentSlide.id} />
+        <Slide ref={slideRef} title={currentSlide?.title} src={currentSlide?.poster} id={currentSlide?.id} />
 
         {/*Cloned Slide For Animation Effect*/}
         <Slide ref={clonedSlideRef} title={clonedSlide.title} src={clonedSlide.poster}
-          id={currentSlide.id} 
+          id={currentSlide?.id} 
           className="absolute inset-0"
           onAnimationEnd={handleAnimationEnd}
         />
