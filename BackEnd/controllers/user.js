@@ -86,7 +86,10 @@ exports.verifyEmail = async (req,res)=>{
     from:'verification@review-app.com',
     to:user.email,
     suject:'Verification Successful',
-    html:`Verification Successful.Welcome to the family ${user.name}.`
+    html:`
+      <h1>Verification Successful.</h1> 
+      Welcome to the family ${user.name}.
+    `
   })
 
   const jwtToken = jwt.sign({ userId:user._id}, process.env.JWT_SECRET_KEY); //payload and secret key
@@ -129,7 +132,7 @@ exports.resendEmailVerificationToken = async (req,res) => {
     to:user.email,
     suject:'Verification Email',
     html:`
-      <p>Your Verification OTP is:</p>
+      <h1>Your Verification OTP is:</h1>
       <h2>${OTP}</h2>
     `
   })
