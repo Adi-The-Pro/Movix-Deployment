@@ -26,11 +26,11 @@ exports.create = async (req, res) => {
   //Send User OTP Through Email
   var transport = generateMailTransporter();
   transport.sendMail({
-    from:'verification@review-app.com',
+    from:"verification@review-app.com",
     to:newUser.email,
-    suject:'Verification Email',
+    suject:"Verification Email",
     html:`
-      <p>Your Verification OTP is:</p>
+      <h1>Your Verification OTP is:</h1>
       <h2>${OTP}</h2>
     `
   })

@@ -4,7 +4,7 @@
   "description": "Backend For Review App(MVC)",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Aditya Rathore",
   "license": "ISC",
